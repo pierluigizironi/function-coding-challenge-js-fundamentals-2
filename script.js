@@ -24,11 +24,18 @@ Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
 Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
 */
 
-const calcAverage = (firstScore, secondScore, thirdScore) => {
-    return (firstScore + secondScore + thirdScore) / 3
+const calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore) / 3
+
+const checkWinner = function(avgDolphins, avgKoala) {
+    
+    if (dolphinScore >= 2 * koalaScore ) {
+        return console.log(`Dolphins win (${dolphinScore} vs. ${koalaScore})`);
+    } else {
+        return console.log(`Koala win (${koalaScore} vs. ${dolphinScore})`);
+    }
 }
 
-const avgDolhins = calcAverage(44, 23, 71);
-console.log(avgDolhins);
-const avgKoala = calcAverage(65, 54, 49);
-console.log(avgKoala);
+const dolphinScore = calcAverage(1, 1, 1);
+const koalaScore = calcAverage(23, 34, 27);
+
+console.log(checkWinner(dolphinScore, koalaScore));
