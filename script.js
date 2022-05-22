@@ -30,10 +30,15 @@ const checkWinner = function(avgDolphins, avgKoala) {
     
     if (dolphinScore >= 2 * koalaScore ) {
         return console.log(`Dolphins win (${dolphinScore} vs. ${koalaScore})`);
-    } else {
+    } else if (koalaScore >= 2 * dolphinScore) {
         return console.log(`Koala win (${koalaScore} vs. ${dolphinScore})`);
+    } else {
+        return console.log('No one win')
     }
 }
+
+// const dolphinScore = calcAverage(1, 1, 1);
+// const koalaScore = calcAverage(1, 1, 1);
 
 const dolphinScore = calcAverage(44, 23, 71);
 const koalaScore = calcAverage(23, 34, 27);
