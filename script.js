@@ -35,7 +35,7 @@ const checkWinner = function(avgDolphins, avgKoala) {
     }
 }
 
-const dolphinScore = calcAverage(1, 1, 1);
+const dolphinScore = calcAverage(44, 23, 71);
 const koalaScore = calcAverage(23, 34, 27);
 
 console.log(checkWinner(dolphinScore, koalaScore));
